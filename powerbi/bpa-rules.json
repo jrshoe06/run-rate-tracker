@@ -1,0 +1,49 @@
+{
+  "rules": [
+    {
+      "id": "MEASURE_DESCRIPTION_REQUIRED",
+      "name": "Measure must have description",
+      "scope": "Measure",
+      "expression": "string.IsNullOrWhiteSpace(Description)",
+      "fixExpression": "",
+      "severity": 2,
+      "category": "Documentation"
+    },
+    {
+      "id": "MEASURE_FORMAT_REQUIRED",
+      "name": "Measure must have format string",
+      "scope": "Measure",
+      "expression": "string.IsNullOrWhiteSpace(FormatString)",
+      "fixExpression": "",
+      "severity": 2,
+      "category": "Formatting"
+    },
+    {
+      "id": "MEASURE_TABLE_LOCATION",
+      "name": "Measures must be in measure tables",
+      "scope": "Measure",
+      "expression": "!(Table.Name.StartsWith("Measures_"))",
+      "fixExpression": "",
+      "severity": 2,
+      "category": "Modeling"
+    },
+    {
+      "id": "TECH_COLUMNS_HIDDEN",
+      "name": "Technical columns should be hidden",
+      "scope": "Column",
+      "expression": "(Name.EndsWith("Id") || Name.EndsWith("Key")) && !IsHidden",
+      "fixExpression": "",
+      "severity": 1,
+      "category": "Modeling"
+    },
+    {
+      "id": "CALCULATED_COLUMN_AVOID",
+      "name": "Avoid calculated columns where measures can be used",
+      "scope": "CalculatedColumn",
+      "expression": "true",
+      "fixExpression": "",
+      "severity": 1,
+      "category": "Modeling"
+    }
+  ]
+}

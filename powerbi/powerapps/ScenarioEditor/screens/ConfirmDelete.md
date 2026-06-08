@@ -1,0 +1,2 @@
+# ConfirmDelete
+Delete confirmation dialog.

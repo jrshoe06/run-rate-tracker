@@ -116,3 +116,6 @@ The `deepScanForForbiddenKeys()` utility is used in tests to verify no forbidden
 | `tests/eligibility.test.ts` | 7 tests — capability level filtering, date ranges, inactive resources |
 | `tests/redact.test.ts` | 5 tests — forbidden key scanning, external view shape |
 
+## Power BI deployment
+
+A parallel Power BI implementation lives in [`/powerbi`](./powerbi). The React POC remains the executable spec; the Power BI build is the reporting-team-owned artifact that reads the same mock data. See [`/powerbi/README.md`](./powerbi/README.md).

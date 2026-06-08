@@ -1,0 +1,7 @@
+createOrReplace
+table WhatIf_CaseTypeSelector
+column Case Type Selector
+dataType: string
+measure Case Type Selector Value = SELECTEDVALUE('WhatIf_CaseTypeSelector'[Case Type Selector], "H-1B")
+formatString: "General"
+description: "Field parameter selector for the seven supported case types."

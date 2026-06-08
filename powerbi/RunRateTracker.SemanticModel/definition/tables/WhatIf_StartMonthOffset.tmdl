@@ -1,0 +1,7 @@
+createOrReplace
+table WhatIf_StartMonthOffset
+column Start Month Offset
+dataType: int64
+measure Start Month Offset Value = SELECTEDVALUE('WhatIf_StartMonthOffset'[Start Month Offset], 0)
+formatString: "#,0"
+description: "What-If slider for start month offset from current month."

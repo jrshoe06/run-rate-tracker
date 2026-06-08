@@ -1,0 +1,21 @@
+createOrReplace
+table Measures_Backlog
+measure New Backlog Points = MAX(0, [Total Demand Points] - [Available Capacity Points])
+formatString: "#,0.00"
+description: "Ports new backlog branch in runForecast() from lib/forecast/engine.ts."
+measure Carried Backlog Points =
+VAR PriorMonths = FILTER(ALL(DateTable[MonthStart]), DateTable[MonthStart] < MAX(DateTable[MonthStart]))
+RETURN SUMX(PriorMonths, [New Backlog Points]) - SUMX(PriorMonths, MAX(0, [Available Capacity Points] - [Scenario Demand Points]))
+formatString: "#,0.00"
+description: "Ports carry-forward/drain pattern in runForecast() from lib/forecast/engine.ts using date iteration."
+measure Ending Backlog Points = MAX(0, [Carried Backlog Points] + [New Backlog Points])
+formatString: "#,0.00"
+description: "Ports ending backlog state update in runForecast() from lib/forecast/engine.ts."
+measure Peak Backlog Points = MAXX(ALL(DateTable[MonthStart]), [Ending Backlog Points])
+formatString: "#,0.00"
+description: "Ports peak backlog tracking in runForecast() from lib/forecast/engine.ts."
+measure Estimated Clearance Month =
+VAR FirstBacklogMonth = MINX(FILTER(ALL(DateTable[MonthStart]), [Ending Backlog Points] > 0), DateTable[MonthStart])
+RETURN MINX(FILTER(ALL(DateTable[MonthStart]), DateTable[MonthStart] > FirstBacklogMonth && [Ending Backlog Points] = 0), DateTable[MonthKey])
+formatString: "General"
+description: "Ports clearance month detection in runForecast() from lib/forecast/engine.ts."

@@ -1,0 +1,5 @@
+scenarioId,scenarioName,clientName,caseType,caseSubtype,projectedVolume,projectedStartMonth,targetCompletionMonth,expectedCycleTimeOverrideDays,productivityWeightOverride,notes
+SC001,Add 150 H-1B Extensions in July,Google,H-1B Extension,,150,2026-07,2026-09,,,Seasonal extension spike from Google mobility team
+SC002,Add 500 H-1B Cases Across Q3,Google,H-1B,,500,2026-07,2026-09,,,Q3 new hire ramp - mixed new H-1B and transfers
+SC003,Add 250 Amendments from Acquisition,Google,Amendment,,250,2026-07,2026-08,,,Post-acquisition amendment wave for acquired employees
+SC004,"Add 1,000 PERM Matters over 2 Months",Google,PERM,,1000,2026-07,2026-08,,,Annual PERM filing cycle - critical priority

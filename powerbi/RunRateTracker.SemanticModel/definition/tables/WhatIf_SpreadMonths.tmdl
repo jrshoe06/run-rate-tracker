@@ -1,0 +1,7 @@
+createOrReplace
+table WhatIf_SpreadMonths
+column Spread Months
+dataType: int64
+measure Spread Months Value = SELECTEDVALUE('WhatIf_SpreadMonths'[Spread Months], 1)
+formatString: "#,0"
+description: "What-If slider for demand spread duration in months."

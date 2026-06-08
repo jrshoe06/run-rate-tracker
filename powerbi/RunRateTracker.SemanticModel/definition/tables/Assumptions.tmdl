@@ -1,0 +1,8 @@
+createOrReplace
+table Assumptions
+column RiskAtRiskUtilizationPct
+dataType: double
+column RiskConstrainedUtilizationPct
+dataType: double
+column StandardMonthlyCapacityPerParalegal
+dataType: double

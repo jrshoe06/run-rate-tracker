@@ -1,0 +1,25 @@
+createOrReplace
+table Scenarios
+column scenarioId
+dataType: string
+isHidden: true
+column scenarioName
+dataType: string
+column clientName
+dataType: string
+column caseType
+dataType: string
+column caseSubtype
+dataType: string
+column projectedVolume
+dataType: int64
+column projectedStartMonth
+dataType: string
+column targetCompletionMonth
+dataType: string
+column expectedCycleTimeOverrideDays
+dataType: int64
+column productivityWeightOverride
+dataType: double
+column notes
+dataType: string

@@ -1,0 +1,7 @@
+createOrReplace
+table WhatIf_ExtraVolume
+column Extra Volume
+dataType: int64
+measure Extra Volume Value = SELECTEDVALUE('WhatIf_ExtraVolume'[Extra Volume], 0)
+formatString: "#,0"
+description: "What-If slider for ad-hoc additional case volume."

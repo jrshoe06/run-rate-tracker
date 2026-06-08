@@ -1,0 +1,17 @@
+createOrReplace
+table SkillMappings
+column resourceId
+dataType: string
+isHidden: true
+column caseType
+dataType: string
+column caseSubtype
+dataType: string
+column capabilityLevel
+dataType: string
+column effectiveStartDate
+dataType: dateTime
+column effectiveEndDate
+dataType: dateTime
+column allocationPreferencePercent
+dataType: double

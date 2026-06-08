@@ -1,0 +1,156 @@
+caseId,clientName,caseType,caseSubtype,currentStage,milestone,assignedParalegalId,assignedAttorneyId,openedDate,targetFileDate,currentProductivityWeight,isActionable,isFiled,isOnHold
+G-H1B-001,Google,H-1B,,Document Collection,Initial Docs Due,P001,A001,2025-10-01,2026-03-15,5,true,false,false
+G-H1B-002,Google,H-1B,,Petition Drafting,Draft Complete,P002,A001,2025-10-05,2026-03-20,5,true,false,false
+G-H1B-003,Google,H-1B,,Attorney Review,Review Pending,P003,A002,2025-10-08,2026-03-25,5,true,false,false
+G-H1B-004,Google,H-1B,,Document Collection,Initial Docs Due,P004,A002,2025-10-12,2026-04-01,5,true,false,false
+G-H1B-005,Google,H-1B,,Petition Drafting,Draft Complete,P006,A001,2025-10-15,2026-04-05,5,true,false,false
+G-H1B-006,Google,H-1B,,Client Review,Client Signature,P007,A002,2025-10-18,2026-04-10,5,true,false,false
+G-H1B-007,Google,H-1B,,Document Collection,Initial Docs Due,P020,A005,2025-10-20,2026-04-15,5,true,false,false
+G-H1B-008,Google,H-1B,,Petition Drafting,Draft Complete,P022,A007,2025-10-22,2026-04-20,5,false,false,false
+G-H1B-009,Google,H-1B,,Attorney Review,Review Pending,P023,A007,2025-10-25,2026-04-25,5,true,false,false
+G-H1B-010,Google,H-1B,,Filed,Receipt Notice,P001,A001,2025-09-01,2026-01-15,5,false,true,false
+G-H1B-011,Google,H-1B,,Document Collection,Initial Docs Due,P002,A002,2025-11-01,2026-05-01,5,true,false,false
+G-H1B-012,Google,H-1B,,Petition Drafting,Draft Complete,P003,A001,2025-11-05,2026-05-05,5,true,false,true
+G-H1B-013,Google,H-1B,,Attorney Review,Review Pending,P004,A002,2025-11-10,2026-05-10,5,true,false,false
+G-H1B-014,Google,H-1B,,Document Collection,Initial Docs Due,P006,A001,2025-11-12,2026-05-15,5,true,false,false
+G-H1B-015,Google,H-1B,,Petition Drafting,Draft Complete,P007,A002,2025-11-15,2026-05-20,5,true,false,false
+G-H1B-016,Google,H-1B,,Document Collection,Initial Docs Due,P020,A005,2025-11-18,2026-05-25,5,true,false,false
+G-H1B-017,Google,H-1B,,Attorney Review,Review Pending,P022,A007,2025-11-20,2026-06-01,5,true,false,false
+G-H1B-018,Google,H-1B,,Petition Drafting,Draft Complete,P023,A007,2025-11-22,2026-06-05,5,false,false,false
+G-H1B-019,Google,H-1B,,Document Collection,Initial Docs Due,P001,A001,2025-11-25,2026-06-10,5,true,false,false
+G-H1B-020,Google,H-1B,,Client Review,Client Signature,P002,A001,2025-11-28,2026-06-15,5,true,false,false
+G-H1B-021,Google,H-1B,,Document Collection,Initial Docs Due,P003,A002,2025-12-01,2026-06-20,5,true,false,false
+G-H1B-022,Google,H-1B,,Petition Drafting,Draft Complete,P004,A002,2025-12-05,2026-06-25,5,true,false,false
+G-H1B-023,Google,H-1B,,Attorney Review,Review Pending,P006,A001,2025-12-08,2026-07-01,5,true,false,false
+G-H1B-024,Google,H-1B,,Document Collection,Initial Docs Due,P007,A002,2025-12-10,2026-07-05,5,true,false,false
+G-H1B-025,Google,H-1B,,On Hold,Client Response Needed,P020,A005,2025-12-12,2026-07-10,5,false,false,true
+G-H1B-026,Google,H-1B,,Petition Drafting,Draft Complete,P009,A002,2025-12-15,2026-07-15,5,true,false,false
+G-H1B-027,Google,H-1B,,Document Collection,Initial Docs Due,P022,A007,2025-12-18,2026-07-20,5,true,false,false
+G-H1B-028,Google,H-1B,,Attorney Review,Review Pending,P023,A005,2025-12-20,2026-07-25,5,true,false,false
+G-H1B-029,Google,H-1B,,Petition Drafting,Draft Complete,P001,A001,2025-12-22,2026-08-01,5,true,false,false
+G-H1B-030,Google,H-1B,,Document Collection,Initial Docs Due,P002,A001,2025-12-28,2026-08-05,5,true,false,false
+G-EXT-001,Google,H-1B Extension,,Document Collection,Initial Docs Due,P001,A001,2025-09-15,2026-02-28,3,true,false,false
+G-EXT-002,Google,H-1B Extension,,Petition Drafting,Draft Complete,P002,A001,2025-09-18,2026-03-05,3,true,false,false
+G-EXT-003,Google,H-1B Extension,,Attorney Review,Review Pending,P003,A002,2025-09-20,2026-03-10,3,true,false,false
+G-EXT-004,Google,H-1B Extension,,Document Collection,Initial Docs Due,P004,A002,2025-09-22,2026-03-15,3,true,false,false
+G-EXT-005,Google,H-1B Extension,,Client Review,Client Signature,P005,A001,2025-09-25,2026-03-20,3,true,false,false
+G-EXT-006,Google,H-1B Extension,,Petition Drafting,Draft Complete,P006,A001,2025-09-28,2026-03-25,3,true,false,false
+G-EXT-007,Google,H-1B Extension,,Filed,Receipt Notice,P007,A002,2025-08-01,2026-01-10,3,false,true,false
+G-EXT-008,Google,H-1B Extension,,Document Collection,Initial Docs Due,P008,A002,2025-10-01,2026-04-01,3,true,false,false
+G-EXT-009,Google,H-1B Extension,,Petition Drafting,Draft Complete,P009,A002,2025-10-05,2026-04-05,3,true,false,false
+G-EXT-010,Google,H-1B Extension,,Attorney Review,Review Pending,P021,A007,2025-10-08,2026-04-10,3,true,false,false
+G-EXT-011,Google,H-1B Extension,,Document Collection,Initial Docs Due,P001,A001,2025-10-10,2026-04-15,3,true,false,false
+G-EXT-012,Google,H-1B Extension,,On Hold,Awaiting Documents,P002,A001,2025-10-12,2026-04-20,3,false,false,true
+G-EXT-013,Google,H-1B Extension,,Petition Drafting,Draft Complete,P003,A002,2025-10-15,2026-04-25,3,true,false,false
+G-EXT-014,Google,H-1B Extension,,Attorney Review,Review Pending,P004,A002,2025-10-18,2026-05-01,3,true,false,false
+G-EXT-015,Google,H-1B Extension,,Document Collection,Initial Docs Due,P005,A001,2025-10-20,2026-05-05,3,true,false,false
+G-EXT-016,Google,H-1B Extension,,Client Review,Client Signature,P006,A001,2025-10-22,2026-05-10,3,true,false,false
+G-EXT-017,Google,H-1B Extension,,Petition Drafting,Draft Complete,P007,A002,2025-10-25,2026-05-15,3,true,false,false
+G-EXT-018,Google,H-1B Extension,,Document Collection,Initial Docs Due,P008,A002,2025-10-28,2026-05-20,3,true,false,false
+G-EXT-019,Google,H-1B Extension,,Attorney Review,Review Pending,P009,A002,2025-11-01,2026-05-25,3,true,false,false
+G-EXT-020,Google,H-1B Extension,,Petition Drafting,Draft Complete,P021,A007,2025-11-05,2026-06-01,3,true,false,false
+G-EXT-021,Google,H-1B Extension,,Document Collection,Initial Docs Due,P001,A001,2025-11-08,2026-06-05,3,true,false,false
+G-EXT-022,Google,H-1B Extension,,Attorney Review,Review Pending,P002,A001,2025-11-10,2026-06-10,3,true,false,false
+G-EXT-023,Google,H-1B Extension,,Petition Drafting,Draft Complete,P003,A002,2025-11-12,2026-06-15,3,true,false,false
+G-EXT-024,Google,H-1B Extension,,Document Collection,Initial Docs Due,P004,A002,2025-11-15,2026-06-20,3,true,false,false
+G-EXT-025,Google,H-1B Extension,,Client Review,Client Signature,P005,A001,2025-11-18,2026-06-25,3,true,false,false
+G-EXT-026,Google,H-1B Extension,,Attorney Review,Review Pending,P006,A001,2025-11-20,2026-07-01,3,true,false,false
+G-EXT-027,Google,H-1B Extension,,Petition Drafting,Draft Complete,P007,A002,2025-11-22,2026-07-05,3,true,false,false
+G-EXT-028,Google,H-1B Extension,,Document Collection,Initial Docs Due,P008,A002,2025-11-25,2026-07-10,3,true,false,false
+G-EXT-029,Google,H-1B Extension,,Attorney Review,Review Pending,P009,A002,2025-11-28,2026-07-15,3,true,false,false
+G-EXT-030,Google,H-1B Extension,,On Hold,Waiting for LCA,P021,A007,2025-12-01,2026-07-20,3,false,false,true
+G-EXT-031,Google,H-1B Extension,,Document Collection,Initial Docs Due,P001,A001,2025-12-05,2026-07-25,3,true,false,false
+G-EXT-032,Google,H-1B Extension,,Petition Drafting,Draft Complete,P002,A001,2025-12-08,2026-08-01,3,true,false,false
+G-EXT-033,Google,H-1B Extension,,Attorney Review,Review Pending,P003,A002,2025-12-10,2026-08-05,3,true,false,false
+G-EXT-034,Google,H-1B Extension,,Document Collection,Initial Docs Due,P004,A002,2025-12-12,2026-08-10,3,true,false,false
+G-EXT-035,Google,H-1B Extension,,Client Review,Client Signature,P005,A001,2025-12-15,2026-08-15,3,true,false,false
+G-PERM-001,Google,PERM,,PWD Filed,PWD Received,P011,A003,2025-07-01,2026-04-30,8,true,false,false
+G-PERM-002,Google,PERM,,Recruitment Phase,SWA Posting,P012,A003,2025-07-05,2026-04-30,8,true,false,false
+G-PERM-003,Google,PERM,,Audit Response,Audit Response Due,P013,A003,2025-07-08,2026-03-15,8,true,false,false
+G-PERM-004,Google,PERM,,PWD Filed,PWD Received,P014,A006,2025-07-10,2026-05-01,8,true,false,false
+G-PERM-005,Google,PERM,,Recruitment Phase,SWA Posting,P011,A003,2025-07-12,2026-05-05,8,true,false,false
+G-PERM-006,Google,PERM,,ETA 9089 Prep,Application Ready,P012,A003,2025-07-15,2026-05-10,8,true,false,false
+G-PERM-007,Google,PERM,,Filed,PERM Approved,P013,A003,2025-06-01,2026-01-15,8,false,true,false
+G-PERM-008,Google,PERM,,PWD Filed,PWD Received,P014,A006,2025-08-01,2026-05-15,8,true,false,false
+G-PERM-009,Google,PERM,,Recruitment Phase,SWA Posting,P011,A003,2025-08-05,2026-05-20,8,true,false,false
+G-PERM-010,Google,PERM,,On Hold,Client Response Needed,P012,A003,2025-08-08,2026-05-25,8,false,false,true
+G-PERM-011,Google,PERM,,ETA 9089 Prep,Application Ready,P013,A006,2025-08-10,2026-06-01,8,true,false,false
+G-PERM-012,Google,PERM,,PWD Filed,PWD Received,P014,A003,2025-08-12,2026-06-05,8,true,false,false
+G-PERM-013,Google,PERM,,Recruitment Phase,SWA Posting,P011,A003,2025-08-15,2026-06-10,8,true,false,false
+G-PERM-014,Google,PERM,,Audit Response,Audit Response Due,P012,A006,2025-08-18,2026-04-01,8,true,false,false
+G-PERM-015,Google,PERM,,ETA 9089 Prep,Application Ready,P013,A003,2025-09-01,2026-06-15,8,true,false,false
+G-PERM-016,Google,PERM,,PWD Filed,PWD Received,P014,A006,2025-09-05,2026-06-20,8,true,false,false
+G-PERM-017,Google,PERM,,Recruitment Phase,SWA Posting,P011,A003,2025-09-08,2026-06-25,8,true,false,false
+G-PERM-018,Google,PERM,,ETA 9089 Prep,Application Ready,P012,A003,2025-09-10,2026-07-01,8,true,false,false
+G-PERM-019,Google,PERM,,PWD Filed,PWD Received,P013,A006,2025-09-12,2026-07-05,8,true,false,false
+G-PERM-020,Google,PERM,,Recruitment Phase,SWA Posting,P014,A003,2025-09-15,2026-07-10,8,true,false,false
+G-PERM-021,Google,PERM,,On Hold,Audit Pending,P011,A003,2025-09-18,2026-07-15,8,false,false,true
+G-PERM-022,Google,PERM,,ETA 9089 Prep,Application Ready,P012,A006,2025-09-20,2026-07-20,8,true,false,false
+G-PERM-023,Google,PERM,,PWD Filed,PWD Received,P013,A003,2025-09-22,2026-07-25,8,true,false,false
+G-PERM-024,Google,PERM,,Recruitment Phase,SWA Posting,P014,A006,2025-09-25,2026-08-01,8,true,false,false
+G-PERM-025,Google,PERM,,ETA 9089 Prep,Application Ready,P011,A003,2025-09-28,2026-08-05,8,true,false,false
+G-AOS-001,Google,AOS,,I-485 Prep,Filing Package Ready,P016,A004,2025-08-01,2026-05-30,7,true,false,false
+G-AOS-002,Google,AOS,,Biometrics Scheduled,Biometrics Done,P017,A004,2025-08-05,2026-05-30,7,true,false,false
+G-AOS-003,Google,AOS,,I-485 Prep,Filing Package Ready,P018,A004,2025-08-08,2026-06-05,7,true,false,false
+G-AOS-004,Google,AOS,,EAD/AP Filed,Card Received,P013,A006,2025-08-10,2026-06-10,7,true,false,false
+G-AOS-005,Google,AOS,,Filed,Interview Scheduled,P016,A004,2025-07-01,2026-02-28,7,false,true,false
+G-AOS-006,Google,AOS,,I-485 Prep,Filing Package Ready,P017,A004,2025-08-12,2026-06-15,7,true,false,false
+G-AOS-007,Google,AOS,,On Hold,Priority Date Not Current,P018,A004,2025-08-15,2026-06-20,7,false,false,true
+G-AOS-008,Google,AOS,,Biometrics Scheduled,Biometrics Done,P013,A006,2025-08-18,2026-06-25,7,true,false,false
+G-AOS-009,Google,AOS,,I-485 Prep,Filing Package Ready,P016,A004,2025-09-01,2026-07-01,7,true,false,false
+G-AOS-010,Google,AOS,,EAD/AP Filed,Card Received,P017,A004,2025-09-05,2026-07-05,7,true,false,false
+G-AOS-011,Google,AOS,,I-485 Prep,Filing Package Ready,P018,A006,2025-09-08,2026-07-10,7,true,false,false
+G-AOS-012,Google,AOS,,Biometrics Scheduled,Biometrics Done,P013,A004,2025-09-10,2026-07-15,7,true,false,false
+G-AOS-013,Google,AOS,,I-485 Prep,Filing Package Ready,P016,A004,2025-09-12,2026-07-20,7,true,false,false
+G-AOS-014,Google,AOS,,On Hold,Waiting for PERM,P017,A006,2025-09-15,2026-07-25,7,false,false,true
+G-AOS-015,Google,AOS,,EAD/AP Filed,Card Received,P018,A004,2025-09-18,2026-08-01,7,true,false,false
+G-AOS-016,Google,AOS,,I-485 Prep,Filing Package Ready,P013,A004,2025-09-20,2026-08-05,7,true,false,false
+G-AOS-017,Google,AOS,,Biometrics Scheduled,Biometrics Done,P016,A006,2025-09-22,2026-08-10,7,true,false,false
+G-AOS-018,Google,AOS,,I-485 Prep,Filing Package Ready,P017,A004,2025-09-25,2026-08-15,7,true,false,false
+G-AOS-019,Google,AOS,,EAD/AP Filed,Card Received,P018,A006,2025-10-01,2026-08-20,7,true,false,false
+G-AOS-020,Google,AOS,,I-485 Prep,Filing Package Ready,P013,A004,2025-10-05,2026-08-25,7,true,false,false
+G-AOS-021,Google,AOS,,Biometrics Scheduled,Biometrics Done,P016,A004,2025-10-08,2026-09-01,7,true,false,false
+G-AOS-022,Google,AOS,,I-485 Prep,Filing Package Ready,P017,A006,2025-10-10,2026-09-05,7,true,false,false
+G-AOS-023,Google,AOS,,On Hold,Priority Date Not Current,P018,A004,2025-10-12,2026-09-10,7,false,false,true
+G-AOS-024,Google,AOS,,EAD/AP Filed,Card Received,P013,A004,2025-10-15,2026-09-15,7,true,false,false
+G-AOS-025,Google,AOS,,I-485 Prep,Filing Package Ready,P016,A006,2025-10-18,2026-09-20,7,true,false,false
+G-AMD-001,Google,Amendment,,Document Collection,Initial Docs Due,P017,A004,2025-10-01,2026-03-15,4,true,false,false
+G-AMD-002,Google,Amendment,,Petition Drafting,Draft Complete,P020,A001,2025-10-05,2026-03-20,4,true,false,false
+G-AMD-003,Google,Amendment,,Attorney Review,Review Pending,P021,A006,2025-10-08,2026-03-25,4,true,false,false
+G-AMD-004,Google,Amendment,,Document Collection,Initial Docs Due,P003,A001,2025-10-10,2026-04-01,4,true,false,false
+G-AMD-005,Google,Amendment,,Filed,Receipt Notice,P017,A004,2025-09-01,2026-01-31,4,false,true,false
+G-AMD-006,Google,Amendment,,Petition Drafting,Draft Complete,P020,A001,2025-10-12,2026-04-05,4,true,false,false
+G-AMD-007,Google,Amendment,,On Hold,Waiting for LCA,P021,A006,2025-10-15,2026-04-10,4,false,false,true
+G-AMD-008,Google,Amendment,,Document Collection,Initial Docs Due,P003,A001,2025-10-18,2026-04-15,4,true,false,false
+G-AMD-009,Google,Amendment,,Attorney Review,Review Pending,P016,A004,2025-10-20,2026-04-20,4,true,false,false
+G-AMD-010,Google,Amendment,,Petition Drafting,Draft Complete,P020,A006,2025-10-22,2026-04-25,4,true,false,false
+G-AMD-011,Google,Amendment,,Document Collection,Initial Docs Due,P021,A001,2025-11-01,2026-05-01,4,true,false,false
+G-AMD-012,Google,Amendment,,Petition Drafting,Draft Complete,P003,A006,2025-11-05,2026-05-05,4,true,false,false
+G-AMD-013,Google,Amendment,,Attorney Review,Review Pending,P016,A004,2025-11-08,2026-05-10,4,true,false,false
+G-AMD-014,Google,Amendment,,Document Collection,Initial Docs Due,P017,A004,2025-11-10,2026-05-15,4,true,false,false
+G-AMD-015,Google,Amendment,,On Hold,Client Response Needed,P020,A001,2025-11-12,2026-05-20,4,false,false,true
+G-AMD-016,Google,Amendment,,Petition Drafting,Draft Complete,P021,A006,2025-11-15,2026-05-25,4,true,false,false
+G-AMD-017,Google,Amendment,,Attorney Review,Review Pending,P003,A001,2025-11-18,2026-06-01,4,true,false,false
+G-AMD-018,Google,Amendment,,Document Collection,Initial Docs Due,P016,A004,2025-11-20,2026-06-05,4,true,false,false
+G-AMD-019,Google,Amendment,,Petition Drafting,Draft Complete,P017,A006,2025-11-22,2026-06-10,4,true,false,false
+G-AMD-020,Google,Amendment,,Attorney Review,Review Pending,P020,A001,2025-11-25,2026-06-15,4,true,false,false
+G-COE-001,Google,Change of Employer,,Document Collection,Initial Docs Due,P006,A001,2025-10-01,2026-04-01,5,true,false,false
+G-COE-002,Google,Change of Employer,,Petition Drafting,Draft Complete,P022,A007,2025-10-05,2026-04-05,5,true,false,false
+G-COE-003,Google,Change of Employer,,Attorney Review,Review Pending,P020,A005,2025-10-08,2026-04-10,5,true,false,false
+G-COE-004,Google,Change of Employer,,Filed,Receipt Notice,P006,A001,2025-09-01,2026-02-28,5,false,true,false
+G-COE-005,Google,Change of Employer,,Document Collection,Initial Docs Due,P022,A007,2025-10-10,2026-04-15,5,true,false,false
+G-COE-006,Google,Change of Employer,,Petition Drafting,Draft Complete,P020,A005,2025-10-12,2026-04-20,5,true,false,false
+G-COE-007,Google,Change of Employer,,On Hold,Client Response Needed,P006,A001,2025-10-15,2026-04-25,5,false,false,true
+G-COE-008,Google,Change of Employer,,Attorney Review,Review Pending,P022,A007,2025-10-18,2026-05-01,5,true,false,false
+G-COE-009,Google,Change of Employer,,Document Collection,Initial Docs Due,P020,A005,2025-10-20,2026-05-05,5,true,false,false
+G-COE-010,Google,Change of Employer,,Petition Drafting,Draft Complete,P006,A001,2025-10-22,2026-05-10,5,true,false,false
+G-COE-011,Google,Change of Employer,,Document Collection,Initial Docs Due,P022,A007,2025-11-01,2026-05-15,5,true,false,false
+G-COE-012,Google,Change of Employer,,Attorney Review,Review Pending,P020,A005,2025-11-05,2026-05-20,5,true,false,false
+G-COE-013,Google,Change of Employer,,Petition Drafting,Draft Complete,P006,A001,2025-11-08,2026-05-25,5,true,false,false
+G-COE-014,Google,Change of Employer,,Document Collection,Initial Docs Due,P022,A007,2025-11-10,2026-06-01,5,true,false,false
+G-COE-015,Google,Change of Employer,,Attorney Review,Review Pending,P020,A005,2025-11-12,2026-06-05,5,true,false,false
+G-CAP-001,Google,CAP,,Lottery Registration,Lottery Result,P002,A001,2025-12-01,2026-04-01,6,true,false,false
+G-CAP-002,Google,CAP,,Petition Drafting,Draft Complete,P008,A002,2025-12-05,2026-04-05,6,true,false,false
+G-CAP-003,Google,CAP,,Document Collection,Initial Docs Due,P023,A005,2025-12-08,2026-04-10,6,true,false,false
+G-CAP-004,Google,CAP,,Lottery Registration,Lottery Result,P006,A001,2025-12-10,2026-04-15,6,true,false,false
+G-CAP-005,Google,CAP,,On Hold,Awaiting Lottery,P004,A002,2025-12-12,2026-04-20,6,false,false,true

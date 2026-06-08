@@ -1,0 +1,7 @@
+createOrReplace
+table Toggle_ExcludeOnHold
+column Exclude On-Hold Cases
+dataType: int64
+measure Exclude On-Hold Cases Value = SELECTEDVALUE('Toggle_ExcludeOnHold'[Exclude On-Hold Cases], 1)
+formatString: "#,0"
+description: "Toggle for excluding on-hold cases from workload burden."

@@ -1,0 +1,8 @@
+caseType,caseSubtype,stage,paralegalWeight,attorneyWeight,expectedCycleDays,expectedMonthlyThroughputPerFTE
+H-1B,,,5,2,45,6
+H-1B Extension,,,3,1,30,10
+Change of Employer,,,5,2,45,6
+PERM,,,8,3,90,3
+AOS,,,7,3,75,4
+Amendment,,,4,2,40,7
+CAP,,,6,2,60,5

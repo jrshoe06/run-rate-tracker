@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
+  "name": "Run Rate Tracker",
+  "theme": "theme/RunRateTrackerTheme.json",
+  "pages": [
+    { "name": "Dashboard", "path": "pages/Dashboard.json" },
+    { "name": "Scenario Editor", "path": "pages/ScenarioEditor.json" },
+    { "name": "Internal", "path": "pages/Internal.json" },
+    { "name": "External", "path": "pages/External.json" }
+  ]
+}

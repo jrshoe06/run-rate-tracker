@@ -1,0 +1,17 @@
+createOrReplace
+table Measures_Capacity
+measure Total Capacity Points = SUM(Resources[monthlyCapacityPoints])
+formatString: "#,0.00"
+description: "Ports computeMonthlyCapacity() from lib/forecast/engine.ts."
+measure Eligible Capacity Points =
+CALCULATE([Total Capacity Points], FILTER(SkillMappings, SkillMappings[capabilityLevel] <> "NotEligible"))
+formatString: "#,0.00"
+description: "Ports getEligibleResources() + computeMonthlyCapacity() from lib/forecast/engine.ts."
+measure Available Capacity Points = [Eligible Capacity Points] - [Current Workload Burden]
+formatString: "#,0.00"
+description: "Ports available capacity calculation in runForecast() from lib/forecast/engine.ts."
+measure Capacity Per Role =
+VAR IncludeAttorney = [Include Attorney Capacity Value]
+RETURN IF(SELECTEDVALUE(Resources[role]) = "Attorney" && IncludeAttorney = 0, BLANK(), SUM(Resources[monthlyCapacityPoints]))
+formatString: "#,0.00"
+description: "Ports role-aware capacity split from assumptions.includeAttorneyCapacity in lib/forecast/engine.ts."

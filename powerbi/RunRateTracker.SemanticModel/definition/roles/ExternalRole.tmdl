@@ -1,0 +1,9 @@
+createOrReplace
+role ExternalRole
+permission: read
+tablePermission Resources = false()
+tablePermission SkillMappings = false()
+columnPermission Resources.name = none
+columnPermission Resources.resourceId = none
+columnPermission CurrentWorkload.assignedParalegalId = none
+columnPermission CurrentWorkload.assignedAttorneyId = none

@@ -1,0 +1,16 @@
+createOrReplace
+table Measures_Risk
+measure Utilization Pct = DIVIDE([Total Demand Points], [Eligible Capacity Points], 0)
+formatString: "0.00%"
+description: "Ports utilization ratio from runForecast() in lib/forecast/engine.ts."
+measure Risk Status =
+VAR Util = [Utilization Pct]
+VAR AtRisk = MAX(Assumptions[RiskAtRiskUtilizationPct])
+VAR Constrained = MAX(Assumptions[RiskConstrainedUtilizationPct])
+RETURN IF(Util >= Constrained, "Capacity Constrained", IF(Util >= AtRisk, "At Risk", "On Track"))
+formatString: "General"
+description: "Ports risk threshold branching in runForecast() from lib/forecast/engine.ts."
+measure Risk Color Hex =
+SWITCH([Risk Status], "On Track", "#16a34a", "At Risk", "#f59e0b", "Capacity Constrained", "#dc2626", "#1f2937")
+formatString: "General"
+description: "Maps risk status to theme color for conditional formatting."

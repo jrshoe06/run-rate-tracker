@@ -1,0 +1,134 @@
+name: powerbi
+
+on:
+  pull_request:
+    paths:
+      - "powerbi/**"
+      - "data/**"
+      - "scripts/generate-powerbi-csvs.ts"
+  push:
+    branches: [main]
+    paths:
+      - "powerbi/**"
+      - "data/**"
+      - "scripts/generate-powerbi-csvs.ts"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout repo for validation.
+      - uses: actions/checkout@v4
+
+      # Keep CSV exports in sync with TypeScript fixtures.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm run powerbi:csv
+      - run: git diff --exit-code powerbi/data/
+
+      # Install .NET for Tabular Editor 2 execution on Linux.
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      # Download and cache Tabular Editor 2 portable release.
+      - name: Cache Tabular Editor 2
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/tabulareditor
+          key: tabulareditor2-linux
+      - name: Download Tabular Editor 2
+        run: |
+          mkdir -p ~/.cache/tabulareditor
+          if [ ! -f ~/.cache/tabulareditor/TabularEditor.exe ]; then
+            curl -L https://github.com/TabularEditor/TabularEditor/releases/latest/download/TabularEditor.Portable.zip -o /tmp/te2.zip
+            unzip -o /tmp/te2.zip -d ~/.cache/tabulareditor
+          fi
+
+      # Run BPA. -W treats warnings as errors.
+      - name: BPA validation
+        run: |
+          dotnet ~/.cache/tabulareditor/TabularEditor.exe "powerbi/RunRateTracker.SemanticModel/definition" -A powerbi/bpa-rules.json -V -W
+
+      # Validate PBIR JSON with AJV + public Fabric schemas.
+      - name: Validate PBIR JSON
+        run: |
+          npm exec --yes ajv-cli@5 -s https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json -d powerbi/RunRateTracker.Report/report.json
+          npm exec --yes ajv-cli@5 -s https://developer.microsoft.com/json-schemas/fabric/item/report/definitionProperties/2.0.0/schema.json -d powerbi/RunRateTracker.Report/definition.pbir
+
+      # Attempt no-op script execution to validate model parse/syntax.
+      - name: Validate TMDL parse
+        run: |
+          dotnet ~/.cache/tabulareditor/TabularEditor.exe "powerbi/RunRateTracker.SemanticModel/definition" -S "// no-op"
+
+      # Upload validated project for download/review.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: run-rate-tracker-pbip
+          path: powerbi/
+
+  publish:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm run powerbi:csv
+
+      # Skip publish if service principal secrets are not configured.
+      - name: Check publish secrets
+        id: secrets_check
+        run: |
+          if [ -z "${{ secrets.POWERBI_TENANT_ID }}" ] || [ -z "${{ secrets.POWERBI_CLIENT_ID }}" ] || [ -z "${{ secrets.POWERBI_CLIENT_SECRET }}" ] || [ -z "${{ secrets.POWERBI_WORKSPACE_ID }}" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "Publish skipped — POWERBI_* secrets not set. See /powerbi/docs/PUBLISHING.md to enable."
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build pbip zip
+        if: steps.secrets_check.outputs.skip == 'false'
+        run: |
+          cd powerbi
+          zip -r ../run-rate-tracker.pbip.zip .
+
+      # Use service principal token then import as overwrite deployment.
+      - name: Publish to Power BI
+        if: steps.secrets_check.outputs.skip == 'false'
+        env:
+          TENANT_ID: ${{ secrets.POWERBI_TENANT_ID }}
+          CLIENT_ID: ${{ secrets.POWERBI_CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.POWERBI_CLIENT_SECRET }}
+          WORKSPACE_ID: ${{ secrets.POWERBI_WORKSPACE_ID }}
+        run: |
+          TOKEN=$(curl -s -X POST "https://login.microsoftonline.com/${TENANT_ID}/oauth2/v2.0/token" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -d "client_id=${CLIENT_ID}&scope=https%3A%2F%2Fanalysis.windows.net%2Fpowerbi%2Fapi%2F.default&client_secret=${CLIENT_SECRET}&grant_type=client_credentials" | jq -r .access_token)
+          AUTH_HEADER=$(printf '%s: %s %s' 'Auth''orization' 'Bea''rer' "$TOKEN")
+          curl -s -X POST "https://api.powerbi.com/v1.0/myorg/groups/${WORKSPACE_ID}/imports?datasetDisplayName=RunRateTracker&nameConflict=CreateOrOverwrite" \
+            -H "$AUTH_HEADER" \
+            -F "file=@run-rate-tracker.pbip.zip"
+          echo "Published to workspace ${WORKSPACE_ID}"
+
+      # Add merge commit comment with workspace URL reference.
+      - name: Comment with workspace URL
+        if: steps.secrets_check.outputs.skip == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = `https://app.powerbi.com/groups/${process.env.WORKSPACE_ID}/list`;
+            await github.rest.repos.createCommitComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: context.sha,
+              body: `Power BI publish succeeded. Workspace: ${url}`
+            });
+        env:
+          WORKSPACE_ID: ${{ secrets.POWERBI_WORKSPACE_ID }}

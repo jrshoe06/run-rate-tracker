@@ -1,0 +1,24 @@
+createOrReplace
+table Measures_Demand
+measure Current Workload Burden =
+SUMX(
+FILTER(CurrentWorkload, CurrentWorkload[isFiled] = FALSE() && ( [Exclude On-Hold Cases Value] = 0 || CurrentWorkload[isOnHold] = FALSE() ) && CurrentWorkload[isActionable] = TRUE()),
+CurrentWorkload[currentProductivityWeight]
+)
+formatString: "#,0.00"
+description: "Ports computeCurrentWorkloadBurden() from lib/forecast/engine.ts."
+measure Scenario Demand Points =
+SUMX(
+Scenarios,
+DIVIDE(Scenarios[projectedVolume] * COALESCE(Scenarios[productivityWeightOverride], LOOKUPVALUE(ProductivityWeights[paralegalWeight], ProductivityWeights[caseType], Scenarios[caseType], 5)),
+DATEDIFF(DATEVALUE(Scenarios[projectedStartMonth] & "-01"), DATEVALUE(Scenarios[targetCompletionMonth] & "-01"), MONTH) + 1)
+)
+formatString: "#,0.00"
+description: "Ports computeDemandBurden() from lib/forecast/engine.ts."
+measure What-If Demand Points =
+DIVIDE([Extra Volume Value] * COALESCE(SELECTEDVALUE(ProductivityWeights[paralegalWeight]), 5), [Spread Months Value], 0)
+formatString: "#,0.00"
+description: "Ports ad-hoc scenario demand spread equivalent for What-If controls."
+measure Total Demand Points = [Scenario Demand Points] + [What-If Demand Points] + [Current Workload Burden]
+formatString: "#,0.00"
+description: "Ports total month demand assembly in runForecast() from lib/forecast/engine.ts."

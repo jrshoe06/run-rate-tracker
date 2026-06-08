@@ -1,0 +1,3 @@
+createOrReplace
+role InternalRole
+permission: read
