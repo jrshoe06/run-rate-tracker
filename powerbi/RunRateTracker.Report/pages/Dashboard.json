@@ -1,0 +1,30 @@
+{
+  "name": "Dashboard",
+  "description": "Main KPI page with 8 cards, scenario slicer, 6 charts, and What-If controls.",
+  "visuals": [
+    "KPI: Current Workload",
+    "KPI: Current Backlog",
+    "KPI: Total Capacity",
+    "KPI: Available Capacity",
+    "KPI: Projected Demand",
+    "KPI: Forecasted Peak Backlog",
+    "KPI: Estimated Clearance",
+    "KPI: Staffing Gap",
+    "Combo: Demand vs Capacity",
+    "Area: Backlog trend",
+    "Bar: Workload by Case Type",
+    "Donut: Capacity by Role",
+    "Bar: Staffing Gap",
+    "Line: Scenario Comparison"
+  ],
+  "slicers": [
+    "Scenario selector",
+    "Case Type field parameter",
+    "Extra Volume",
+    "Spread Months",
+    "Start Month Offset",
+    "Additional FTE",
+    "Include Attorney Capacity",
+    "Exclude On-Hold Cases"
+  ]
+}

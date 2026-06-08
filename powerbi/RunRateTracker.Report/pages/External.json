@@ -1,0 +1,12 @@
+{
+  "name": "External",
+  "description": "External-facing redacted summary.",
+  "requiredRole": "ExternalRole",
+  "visuals": [
+    "Capacity band",
+    "Risk badge",
+    "Aggregate backlog trend",
+    "Completion window",
+    "Recommended action"
+  ]
+}

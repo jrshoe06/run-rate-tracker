@@ -1,0 +1,4 @@
+createOrReplace
+model Model
+culture: en-US
+defaultPowerBIDataSourceVersion: powerBI_V3

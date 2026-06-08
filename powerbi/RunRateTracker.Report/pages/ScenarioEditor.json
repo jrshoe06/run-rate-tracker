@@ -1,0 +1,10 @@
+{
+  "name": "Scenario Editor",
+  "description": "Power Apps visual for persistent scenario CRUD and table view with refresh.",
+  "autoPageRefreshMinutes": 5,
+  "visuals": [
+    "Power Apps visual bound to Scenarios",
+    "Scenarios table",
+    "Refresh button (Page.Refresh())"
+  ]
+}

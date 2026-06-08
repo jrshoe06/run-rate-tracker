@@ -1,0 +1,15 @@
+{
+  "name": "RunRateTrackerTheme",
+  "foreground": "#1f2937",
+  "background": "#ffffff",
+  "tableAccent": "#1f2937",
+  "dataColors": ["#16a34a", "#f59e0b", "#dc2626", "#1f2937", "#64748b"],
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [{ "show": true, "fontFamily": "Segoe UI, Inter, Arial" }],
+        "labels": [{ "fontFamily": "Segoe UI, Inter, Arial" }]
+      }
+    }
+  }
+}

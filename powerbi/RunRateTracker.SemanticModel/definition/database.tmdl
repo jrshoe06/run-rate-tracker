@@ -1,0 +1,3 @@
+createOrReplace
+database RunRateTracker
+compatibilityLevel: 1605

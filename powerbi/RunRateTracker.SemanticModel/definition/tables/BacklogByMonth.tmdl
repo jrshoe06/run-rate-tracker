@@ -1,0 +1,8 @@
+createOrReplace
+table BacklogByMonth =
+ADDCOLUMNS(
+DateTable,
+"NewBacklog", [New Backlog Points],
+"CarriedBacklog", [Carried Backlog Points],
+"EndingBacklog", [Ending Backlog Points]
+)

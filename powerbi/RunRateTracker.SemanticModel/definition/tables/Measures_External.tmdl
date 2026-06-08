@@ -1,0 +1,24 @@
+createOrReplace
+table Measures_External
+measure Required Additional FTE = CEILING(DIVIDE([Peak Backlog Points], MAX(Assumptions[StandardMonthlyCapacityPerParalegal]), 0), 1)
+formatString: "#,0"
+description: "Ports requiredAdditionalFTE calculation from runForecast() in lib/forecast/engine.ts."
+measure FTE Gap After What-If = MAX(0, [Required Additional FTE] - [Additional FTE Value])
+formatString: "#,0"
+description: "Staffing gap after what-if staffing input."
+measure External Capacity Band =
+VAR Util = [Utilization Pct]
+RETURN IF(Util < 0.7, "High", IF(Util < 0.9, "Medium", "Low"))
+formatString: "General"
+description: "External-safe capacity abstraction without exposing raw points."
+measure External Completion Window =
+VAR MonthKey = [Estimated Clearance Month]
+VAR Dt = DATEVALUE(MonthKey & "-01")
+VAR Q = "Q" & ROUNDUP(MONTH(Dt) / 3, 0)
+RETURN IF(ISBLANK(MonthKey), BLANK(), Q & " " & YEAR(Dt))
+formatString: "General"
+description: "External-safe completion window string without exact date granularity."
+measure External Recommended Action =
+SWITCH([Risk Status], "Capacity Constrained", "Increase staffing or phase intake", "At Risk", "Monitor and prepare contingency", "Maintain current staffing")
+formatString: "General"
+description: "External-safe action recommendation derived from risk status."

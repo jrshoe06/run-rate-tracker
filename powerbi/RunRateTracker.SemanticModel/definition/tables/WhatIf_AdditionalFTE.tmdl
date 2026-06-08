@@ -1,0 +1,7 @@
+createOrReplace
+table WhatIf_AdditionalFTE
+column Additional FTE
+dataType: int64
+measure Additional FTE Value = SELECTEDVALUE('WhatIf_AdditionalFTE'[Additional FTE], 0)
+formatString: "#,0"
+description: "What-If slider for added staffing."

@@ -1,0 +1,20 @@
+createOrReplace
+table DateTable
+isDateTable: true
+column Year
+dataType: int64
+column Quarter
+dataType: string
+column Month
+dataType: int64
+column MonthKey
+dataType: string
+isHidden: true
+column MonthStart
+dataType: dateTime
+column MonthEnd
+dataType: dateTime
+column MonthName
+dataType: string
+column IsCurrentMonth
+dataType: boolean

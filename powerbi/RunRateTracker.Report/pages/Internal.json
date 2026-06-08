@@ -1,0 +1,10 @@
+{
+  "name": "Internal",
+  "description": "Internal-only detailed staffing and roster analytics.",
+  "requiredRole": "InternalRole",
+  "visuals": [
+    "Resource roster capability matrix",
+    "Per-resource utilization",
+    "Detailed staffing table"
+  ]
+}

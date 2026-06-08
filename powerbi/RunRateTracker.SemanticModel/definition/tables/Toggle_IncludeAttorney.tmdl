@@ -1,0 +1,7 @@
+createOrReplace
+table Toggle_IncludeAttorney
+column Include Attorney Capacity
+dataType: int64
+measure Include Attorney Capacity Value = SELECTEDVALUE('Toggle_IncludeAttorney'[Include Attorney Capacity], 1)
+formatString: "#,0"
+description: "Toggle for attorney capacity inclusion."

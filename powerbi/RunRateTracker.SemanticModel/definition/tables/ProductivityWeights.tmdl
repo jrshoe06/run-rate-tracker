@@ -1,0 +1,16 @@
+createOrReplace
+table ProductivityWeights
+column caseType
+dataType: string
+column caseSubtype
+dataType: string
+column stage
+dataType: string
+column paralegalWeight
+dataType: double
+column attorneyWeight
+dataType: double
+column expectedCycleDays
+dataType: int64
+column expectedMonthlyThroughputPerFTE
+dataType: double

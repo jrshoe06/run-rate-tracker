@@ -1,0 +1,23 @@
+createOrReplace
+table Resources
+column resourceId
+dataType: string
+isHidden: true
+column name
+dataType: string
+column role
+dataType: string
+column team
+dataType: string
+column clientAccount
+dataType: string
+column monthlyCapacityPoints
+dataType: double
+column availableCapacityPoints
+dataType: double
+column unavailableDates
+dataType: string
+column seniorityLevel
+dataType: string
+column isActive
+dataType: boolean

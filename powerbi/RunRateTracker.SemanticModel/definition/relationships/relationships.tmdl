@@ -1,0 +1,11 @@
+createOrReplace
+model Model
+relationship Resources_ResourceId_CurrentWorkload_Paralegal
+fromColumn: Resources.resourceId
+toColumn: CurrentWorkload.assignedParalegalId
+relationship Resources_ResourceId_SkillMappings
+fromColumn: Resources.resourceId
+toColumn: SkillMappings.resourceId
+relationship DateTable_MonthKey_Scenarios_Start
+fromColumn: DateTable.MonthKey
+toColumn: Scenarios.projectedStartMonth
